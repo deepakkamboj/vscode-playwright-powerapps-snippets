@@ -1,8 +1,10 @@
 {
   "name": "vscode-playwright-powerapps-snippets",
-  "version": "0.0.1",
+  "version": "0.0.0-semantically-released",
   "license": "MIT",
   "author": "Deepak Kamboj",
+  "publisher": "deepakkamboj",
+  "displayName": "Playwright Code Snippets for PowerApps",
   "description": "A Visual Studio Code extension which adds predefined useful code snippets for Playwright for PowerApps",
   "homepage": "https://github.com/deepakkamboj/vscode-playwright-powerapps-snippets",
   "keywords": [
@@ -13,8 +15,6 @@
     "url": "https://github.com/deepakkamboj/vscode-playwright-powerapps-snippets.git"
   },
   "bugs": "https://github.com/deepakkamboj/vscode-playwright-powerapps-snippets/issues",
-  "displayName": "Playwright Snippets for PowerApps",
-  "publisher": "deepakkamboj",
   "icon": "images/playwright-logo.png",
   "galleryBanner": {
     "color": "#2b3137",
@@ -22,6 +22,12 @@
   },
   "categories": [
     "Snippets"
+  ],
+  "keywords": [
+    "snippets",
+    "playwright",
+    "playwright-test",
+    "playwright-core"
   ],
   "contributes": {
     "snippets": [
@@ -52,6 +58,10 @@
     "vscode:publish": "vsce publish"
   },
   "devDependencies": {
-    "jest": "^24.1.0"
+    "jest": "^24.1.0",
+    "prettier": "^2.0.5",
+    "semantic-release": "^17.2.3",
+    "semantic-release-vsce": "^3.0.1",
+    "vsce": "^1.78.0"
   }
 }
