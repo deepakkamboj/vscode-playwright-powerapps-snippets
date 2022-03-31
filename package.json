@@ -1,15 +1,12 @@
 {
   "name": "vscode-playwright-test-snippets",
-  "version": "0.0.0-semantically-released",
+  "version": "0.0.2",
   "license": "MIT",
   "author": "Deepak Kamboj",
-  "publisher": "deepakkamboj",
+  "publisher": "deepakkamboj0121",
   "displayName": "Playwright Code Snippets",
   "description": "A Visual Studio Code extension which adds predefined useful code snippets for Playwright",
   "homepage": "https://github.com/deepakkamboj/vscode-playwright-test-snippets",
-  "keywords": [
-    "Playwright"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/deepakkamboj/vscode-playwright-test-snippets.git"
