@@ -1,15 +1,95 @@
 {
-  "Examples - drag and drop": {
-    "prefix": "pw-examples-dragAndDrop",
+  "Playwright import": {
+    "prefix": "pw-import",
+    "description": "Imports Playwright's test libraries",
     "body": [
-      "// Drags the mouse from a point",
-      "await page.mouse.move($1);",
-      "await page.mouse.down();",
-      "",
-      "// Drops the mouse to another point",
-      "await page.mouse.move($2);",
-      "await page.mouse.up();"
-    ],
-    "description": "Creates an example that drags the mouse from a point and drops it to another point"
+      "/*!\n",
+      " * Copyright (C) Microsoft Corporation. All rights reserved.\n",
+      " */\n",
+      "\n",
+      "import { test } from '@playwright/test';\n",
+      "import { Team } from '@paeng/playwright-teams-info';\n",
+      "\n"
+    ]
+  },
+  "Playwright describe block": {
+    "prefix": "pw-describe",
+    "description": "Playwright describe block",
+    "body": ["test.describe('$1', () => {", "\t$0", "})", ""]
+  },
+  "Playwright test block": {
+    "prefix": "pw-test",
+    "body": ["test('$1', async ({ ${2:page} }) => {", "\t$0", "})", ""]
+  },
+  "Playwright integrationTest block": {
+    "prefix": "pw-intTest",
+    "body": [
+      "integrationTest(\n",
+      "    {\n",
+      "      envTypes: [EnvironmentType.MakerShell],\n",
+      "      runTypes: [RunType.Runner],\n",
+      "      runEnvironments: [\n",
+      "        [RunEnvironment.Prod, Severity.S3],\n",
+      "        [RunEnvironment.Preview, Severity.S3],\n",
+      "      ],\n",
+      "      runGeos: [RunGeo.USA],\n",
+      "    },\n",
+      "    Team.Shell,\n",
+      "    '$1',\n",
+      "    async ({ page }) => {\n",
+      "       $0\n",
+      "    });"
+    ]
+  },
+  "Playwright test.use block": {
+    "prefix": "pw-use",
+    "body": ["test.use({ $0 })", ""]
+  },
+  "Playwright test.step block": {
+    "prefix": "pw-step",
+    "body": ["await test.step('$1', async () => {", "\t$0", "})", ""]
+  },
+  "Playwright beforeEach block": {
+    "prefix": "pw-beforeEach",
+    "body": ["test.beforeEach(async ({ ${1:page} }) => {", "\t$0", "})", ""]
+  },
+  "Playwright afterEach block": {
+    "prefix": "pw-afterEach",
+    "body": ["test.afterEach(async ({ ${1:page} }) => {", "\t$0", "})", ""]
+  },
+  "Playwright beforeAll block": {
+    "prefix": "pw-beforeAll",
+    "body": ["test.beforeAll(async ({ ${1:browser} }) => {", "\t$0", "})", ""]
+  },
+  "Playwright afterAll block": {
+    "prefix": "pw-afterAll",
+    "body": ["test.afterAll(async ({ ${1:browser} }) => {", "\t$0", "})", ""]
+  },
+  "POM Class": {
+    "prefix": "pw-pomClass",
+    "body": [
+        "/*!\n",
+        " * Copyright (C) Microsoft Corporation. All rights reserved.\n",
+        " */\n",
+        "\n",
+        "import { navigateToUrl } from '@paeng/playwright-solution';\n",
+        "import { Page } from '@playwright/test';\n",
+        "\n",
+        "export class ExamplePage {\n",
+        "  readonly page: Page;\n",
+        "\n",
+        "  constructor(page: Page) {\n",
+        "    this.page = page;\n",
+        "  }\n",
+        "\n",
+        "  public async closePage(): Promise<void> {\n",
+        "    this.page.close();\n",
+        "  }\n",
+        "\n",
+        "  public async goToUrl(appUrl: string): Promise<void> {\n",
+        "    await navigateToUrl (this.page, appUrl, true);\n",
+        "  }\n",
+        "}"
+    ]
   }
 }
