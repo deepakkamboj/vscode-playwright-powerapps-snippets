@@ -1,8 +1,8 @@
 # Playwright Code Snippets
 
 ![Build status](https://github.com/deepakkamboj/vscode-playwright-test-snippets/workflows/main/badge.svg?branch=main)
-[![Extension version](https://img.shields.io/vscode-marketplace/v/deepakkamboj.vscode-playwright-test-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=deepakkamboj.vscode-playwright-test-snippets)
-[![Extension installs](https://img.shields.io/vscode-marketplace/i/deepakkamboj.vscode-playwright-test-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=deepakkamboj.vscode-playwright-test-snippets)
+[![Extension version](https://img.shields.io/vscode-marketplace/v/deepakkamboj0121.vscode-playwright-test-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=deepakkamboj0121.vscode-playwright-test-snippets)
+[![Extension installs](https://img.shields.io/vscode-marketplace/i/deepakkamboj0121.vscode-playwright-test-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=deepakkamboj0121.vscode-playwright-test-snippets)
 [![Semantic release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 ## Getting Started
@@ -16,7 +16,7 @@ This Visual Studio Code extension adds predefined useful code snippets for 🎭 
 
 ## 👨🏻‍🏫 How to Use
 
-The first thing you need to do is installing the [VsCode Extension](https://marketplace.visualstudio.com/items?itemName=deepakkamboj.vscode-playwright-test-snippets).
+The first thing you need to do is installing the [VsCode Extension](https://marketplace.visualstudio.com/items?itemName=deepakkamboj0121.vscode-playwright-test-snippets).
 
 Basically, there are two ways to apply the snippets:
 
