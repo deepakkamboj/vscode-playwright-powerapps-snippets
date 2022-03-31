@@ -17,9 +17,12 @@ jobs:
       #- run: npm ci --ignore-scripts
       - run: npm run build --if-present
         name: Build
-      - run: npm test
-        env:
-          CI: true
+      
+      - name: Run Jest
+        uses: stefanoeb/jest-action@1.0.2
+      #- run: npm test
+      #  env:
+      #    CI: true
 
   publish:
     if: github.ref == 'refs/heads/main'
