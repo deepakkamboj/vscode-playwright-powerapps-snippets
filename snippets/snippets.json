@@ -19,10 +19,12 @@
   },
   "Playwright test block": {
     "prefix": "pw-test",
+    "description": "Playwright test block",
     "body": ["test('$1', async ({ ${2:page} }) => {", "\t$0", "});", ""]
   },
   "Playwright integrationTest block": {
     "prefix": "pw-intTest",
+    "description": "Playwright integrationTest wrapper function block",
     "body": [
       "integrationTest(\n",
       "    {\n",
@@ -43,30 +45,105 @@
   },
   "Playwright test.use block": {
     "prefix": "pw-use",
+    "description": "Playwright use block",
     "body": ["test.use({ $0 });", ""]
   },
   "Playwright test.step block": {
     "prefix": "pw-step",
+    "description": "Playwright test.step block",
     "body": ["await test.step('$1', async () => {", "\t$0", "});", ""]
   },
   "Playwright beforeEach block": {
     "prefix": "pw-beforeEach",
+    "description": "Playwright beforeEach block",
     "body": ["test.beforeEach(async ({ ${1:page} }) => {", "\t$0", "});", ""]
   },
   "Playwright afterEach block": {
     "prefix": "pw-afterEach",
+    "description": "Playwright afterEach block",
     "body": ["test.afterEach(async ({ ${1:page} }) => {", "\t$0", "});", ""]
   },
   "Playwright beforeAll block": {
     "prefix": "pw-beforeAll",
+    "description": "Playwright beforeAll block",
     "body": ["test.beforeAll(async ({ ${1:browser} }) => {", "\t$0", "});", ""]
   },
   "Playwright afterAll block": {
     "prefix": "pw-afterAll",
+    "description": "Playwright afterAll block",
     "body": ["test.afterAll(async ({ ${1:browser} }) => {", "\t$0", "});", ""]
+  },
+  "page.evaluate": {
+    "prefix": "pw-page-evaluate",
+    "body": ["await page.evaluate(() => {", "\t$0", "});"],
+    "description": "Evaluates a function in the page context"
+  },
+  "page.click": {
+    "prefix": "pw-page-click",
+    "body": "await page.locator('$0').click();",
+    "description": "Clicks in the center of an element within the page"
+  },
+  "page.title": {
+    "prefix": "pw-page-title",
+    "body": "await page.title();",
+    "description": "Returns the page's title"
+  },
+  "page.url": {
+    "prefix": "pw-page-url",
+    "body": "await page.url();",
+    "description": "Returns the page's URL"
+  },
+  "page.waitFor": {
+    "prefix": "pw-page-waitFor",
+    "body": "await page.waitFor($0);",
+    "description": "Waits until an element/predicate/timeout within the page is resolved"
+  },
+  "page.waitForFunction": {
+    "prefix": "pw-page-waitForFunction",
+    "body": "await page.waitForFunction($0);",
+    "description": "Waits until a predicate within the page returns a truthy value"
+  },
+  "page.waitForNavigation": {
+    "prefix": "pw-page-waitForNavigation",
+    "body": "await page.waitForNavigation();",
+    "description": "Waits until the page navigates to a new URL or reloads"
+  },
+  "page.waitForRequest": {
+    "prefix": "pw-page-waitForRequest",
+    "body": "await page.waitForRequest($0);",
+    "description": "Waits until a request by URL/predicate is resolved"
+  },
+  "page.waitForResponse": {
+    "prefix": "pw-page-waitForResponse",
+    "body": "await page.waitForResponse($0);",
+    "description": "Waits until a response by URL/predicate is resolved"
+  },
+  "page.waitForSelector": {
+    "prefix": "pw-page-waitForSelector",
+    "body": "await page.waitForSelector('$0');",
+    "description": "Waits until an element (by selector) is appeared in the page"
+  },
+  "page.waitForXPath": {
+    "prefix": "pw-page-waitForXPath",
+    "body": "await page.waitForXPath('$0');",
+    "description": "Waits until an element (by XPath) is appeared in the page"
+  },
+  "page.waitForFileChooser": {
+    "prefix": "pw-page-waitForFileChooser",
+    "body": "await page.waitForFileChooser();",
+    "description": "Waits until a file chooser is requested in the page"
+  },
+  "Examples - sleep": {
+    "prefix": "pw-examples-sleep",
+    "body": [
+      "const sleep = duration => new Promise(resolve => setTimeout(resolve, duration));",
+      "await sleep($0);"
+    ],
+    "description": "Creates an example that sleeps the browser with a specified time period"
   },
   "POM Class": {
     "prefix": "pw-pomClass",
+    "description": "Playwright Page Object Model (POM) class structure",
     "body": [
         "/*!\n",
         " * Copyright (C) Microsoft Corporation. All rights reserved.\n",
